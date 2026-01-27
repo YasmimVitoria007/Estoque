@@ -15,11 +15,10 @@ class EntradaController extends Controller
       public function store(Request $request){
         $entrada = Entrada::create([
             "quantidade"=> $request->quantidade,
-            "id_produto"=> $request->id_produto,
+            "id_produto"=> $request->id_produto, 
         ]);
 
         return response()->json($entrada);
-
     }
 
        public function delete($id)
