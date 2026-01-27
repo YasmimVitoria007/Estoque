@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\EntradaController;
 use App\Http\Controllers\ProdutoController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -15,4 +16,7 @@ Route::post('/cliente', [ClienteController::class, 'store']);
 Route::put('/cliente/{id}', [ClienteController::class, 'update']);
 Route::delete('/cliente/{id}', [ClienteController::class, 'delete']);
 
+Route::get('/entrada', [EntradaController::class, 'index']);
+Route::post('/entrada', [EntradaController::class, 'store']);
+Route::delete('/entrada/{id}', [EntradaController::class, 'delete']);
 
